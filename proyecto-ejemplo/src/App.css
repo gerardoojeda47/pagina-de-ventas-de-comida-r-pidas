@@ -1,0 +1,99 @@
+.app {
+  min-height: 100vh;
+  background: var(--dark);
+}
+
+/* Divider */
+.app__divider {
+  text-align: center;
+  padding: 16px 0;
+  position: relative;
+}
+.app__divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--red), transparent);
+}
+.app__divider span {
+  position: relative;
+  background: var(--dark);
+  padding: 0 20px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Footer */
+.app__footer {
+  background: #080808;
+  text-align: center;
+  padding: 56px 24px 32px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.app__footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.app__footer-logo-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--yellow);
+  box-shadow: 0 0 30px rgba(245,197,24,0.35);
+  animation: logo-glow 3s ease-in-out infinite;
+}
+@keyframes logo-glow {
+  0%, 100% { box-shadow: 0 0 30px rgba(245,197,24,0.35); }
+  50%       { box-shadow: 0 0 55px rgba(245,197,24,0.6);  }
+}
+.app__footer-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  color: var(--white);
+}
+.app__footer-slogan {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.4);
+  margin: 0;
+  font-style: italic;
+}
+.app__footer-contacts {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 12px;
+}
+.app__footer-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--green);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 10px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.15s, opacity 0.15s;
+}
+.app__footer-wa--domis { background: var(--orange); }
+.app__footer-wa:hover  { transform: translateY(-2px); opacity: 0.9; }
+.app__footer-copy {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.2);
+  margin: 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 20px;
+}

@@ -1,0 +1,39 @@
+.wa-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--green);
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.88rem;
+  box-shadow: 0 8px 32px rgba(37,211,102,0.5);
+  transition: transform 0.18s, box-shadow 0.18s;
+  animation: wa-pulse 3s ease-in-out infinite;
+}
+.wa-float:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 14px 44px rgba(37,211,102,0.65);
+  animation: none;
+}
+.wa-float__icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+@keyframes wa-pulse {
+  0%, 100% { box-shadow: 0 8px 32px rgba(37,211,102,0.5); }
+  50%       { box-shadow: 0 8px 48px rgba(37,211,102,0.75); }
+}
+
+@media (max-width: 480px) {
+  .wa-float { padding: 14px; bottom: 20px; right: 20px; }
+  .wa-float__label { display: none; }
+}
